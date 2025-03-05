@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     // Check if credentials match
     if (users[username] && users[username] === password) {
         alert("Login Successful!");
-        window.location.href = "https://villa-unw.vercel.app/Dimi1600202025.html";
+        window.location.href = "Dimi1600202025.html";
     } else {
         alert("Login Failed: Invalid username or password");
     }
