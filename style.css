@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #004d40; /* Dark teal text */
+    background: url("bg2.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px); /* Glass effect */
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-spacing: 30px;
+    overflow-y: scroll;  /* Enable vertical scroll */
+    overflow-x: hidden;  /* Hide horizontal scroll */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;  /* Set the width of the vertical scrollbar */
+}
+
+/* Style the track (part the thumb slides within) */
+::-webkit-scrollbar-track {
+    background-color:#15408e; /* bg friendly background for track */
+}
+
+/* Style the thumb (part that moves) */
+::-webkit-scrollbar-thumb {
+    background-color: #8b3d93; /* Dark blue color with some transparency */
+    border-radius: 20px; /* Rounded corners */
+}
+
+/* Hover effect on the thumb */
+::-webkit-scrollbar-thumb {
+    background: #8b3d93;
+    border-radius: 10px;
+    border: 2px solid transparent; /* Prevents white halo */
+    background-clip: padding-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #00796b; /* Teal headings */
+    text-align: center;
+}
+h1{
+    color: #e0f7fa; /* Light cyan headings */
+}
+
+h2 {
+    color: #067c77;
+}
+h3 {
+    color:#ff0000
+}
+h6 {
+    color:#ffffff
+}
+p {/*This is Tempory*/
+    margin: 20px 0;
+    line-height: 1.5;
+    text-align: center;
+    color: #b2dfdb;
+}
+i {
+    vertical-align: middle;
+    color: #00796b;
+}
+a {
+    color: #0288d1; /* Blue links */
+    cursor: pointer;
+}
+
+a:hover {
+    color: #01579b; /* Darker blue on hover */
+}
+
+.pointer {cursor: pointer;}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    border-radius: 0%;
+    border-radius: 15px; /* Adjust as needed */
+    overflow: hidden; /* Ensures content inside respects the radius */
+    backdrop-filter: blur(8px); /* Blur background for glass effect */
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #004d40; /* Dark teal border */
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #00796b; /* Teal header background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center align headers */
+}
+
+table tr:nth-child(even) {
+    background-color: #b2dfdb; /* Light teal for even rows */
+}
+
+table tr:nth-child(odd) {
+    background-color: #e0f2f1; /* Lighter teal for odd rows */
+}
+
+table tr:hover {
+    background-color: #80cbc4; /* Medium teal on hover */
+}
+
+/* Button Styles */
+button {
+    background-color: #00796b; /* Teal background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 0.4s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: rgb(15, 71, 131); /* White background */
+    color: #00796b; /* Teal text */
+    border: 2px solid #00796b; /* Teal border */
+}
+
+/* Expanding Wifi Chart */
+.wifi-usage-table {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the table horizontally */
+    display: none; /* Ensures it is hidden before JavaScript loads */
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* Centers table horizontally */
+    align-items: center; /* Aligns vertically */
+    width: 100%;
+}
+
+/* Updated Table */
+td:nth-child(3) {
+    padding: 10px;
+}
+
+.activity {
+    display: inline-block;
+    width: 200px; /* Ensures equal width */
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    margin: 2px; /* Adds spacing between activities */
+}
+
+.activity:hover::after {
+    content: attr(data-percent);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    white-space: nowrap;
+}
+
+/* Ensure canvas elements are visible and properly sized */
+.charts-container {
+    display: flex;
+    justify-content: center; /* Centers the charts */
+    gap: 30px; /* Adds spacing between charts */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    color: #e0f7fa;
+}
+
+canvas {
+    width: 150px !important;
+    height: 150px !important;
+}

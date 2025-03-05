@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Dashboard.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>User's Dashboard</h1>
+        
+    </header>
+    <main>
+        <section>
+             <div class="charts-container">
+                <div class="chart-box">
+                    <p>Package: Basic</p>
+                    <canvas class="chart-container" data-used="18.2" data-total="40"></canvas>
+                    <p>Month-March<br>Current Rs.3293</p>
+                </div>
+                <div class="chart-box">
+                    <p>Extra GB</p>
+                    <canvas class="chart-container" data-used="8.8" data-total="10"></canvas>
+                    <p>Valid till 28 April<br>Rs.850<br>Current Rs.3575</p>
+                </div>
+                <div class="chart-box">
+                    <p>Package: Youth add-on</p>
+                    <canvas class="chart-container" data-used="17.2" data-total="20"></canvas>
+                    <p>Renewed (Auto) (7 days)<br>Rs.195<br>Current Rs.390</p>
+                </div>
+            </div>
+            <br>
+                <h3><b>Current Bill<br>Month:February<br>Rs.9,000 ≈$30.00</h3><p></b>Download the Bill</p>
+            </h3>
+            <h2 class="toggle-header pointer" onclick="toggleExpand()">Wifi Daily Usage &#9662;</h2>
+            <div class="expand-content">
+                <div class="table-container">
+                <table class="wifi-usage-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 200px;">Date</th>
+                            <th style="width: 120px;">Usage</th>
+                            <th>Top Web Activities</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-02-16</td>
+                        <td>5.8 GB</td>
+                        <td>TCP Protocol, Speedtest, iCloud</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-17</td>
+                        <td>5.3 GB</td>
+                        <td>iCloud, Instagram, Existing or Unmanaged Session, Youtube</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-18</td>
+                        <td>5.7 GB</td>
+                        <td>Youtube, iCloud, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-19</td>
+                        <td>11.0 GB</td>
+                        <td>SSL, Apple Updates, Instagram, iCloud</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-20</td>
+                        <td>5.0 GB</td>
+                        <td>iCloud, SSL, Apple Updates, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-21</td>
+                        <td>6.1 GB</td>
+                        <td>SSL, Instagram Video, Youtube, iCloud</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-22</td>
+                        <td>11.4 GB</td>
+                        <td>Instagram Video, iCloud,Apple Updates, Telegram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-23</td>
+                        <td>8.2 GB</td>
+                        <td>iCloud, SSL, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-24</td>
+                        <td>14.6 GB</td>
+                        <td>SSL, iCloud, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-25</td>
+                        <td>9.5 GB</td>
+                        <td>TCP Protocol, Instagram, Zoom</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-26</td>
+                        <td>7.9 GB</td>
+                        <td>TCP Protocol, Youtube, iCloud, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-27</td>
+                        <td>12.2 GB</td>
+                        <td>Youtube, Instagram, iCloud</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-28</td>
+                        <td>10.4 GB</td>
+                        <td>TCP Protocol, iCloud, Youtube, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-01</td>
+                        <td>5.3 GB</td>
+                        <td>TCP Protocol, iCloud, Apple Updates, iTunes</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-02</td>
+                        <td>12.2 GB</td>
+                        <td>Instagram, iCloud, Apple Updates, UDP</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-03</td>
+                        <td>7.6 GB</td>
+                        <td>TCP Protocol, UDP, Youtube, Instagram</td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-04</td>
+                        <td>9.1 GB</td>
+                        <td>Rutube, TCP Protocol, UDP, Instagram</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2 id="electricity-toggle-header" style="cursor: pointer;">Electricity Meter Reads &#9662;</h2>
+            <div id="electricity-meter-container" style="display: none;">
+                <table class="electricity-meter-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Units</th>
+                            <th>Time Period</th>
+                            <th>Usage within Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2025-02-16</td><td>120.4 kWh</td><td>Checked-in</td></tr>
+                        <tr><td>2025-02-17</td><td>129.8 kWh</td><td>1 Day</td><td>9.4 kWh</td></tr>
+                        <tr><td>2025-02-24</td><td>234.5 kWh</td><td>7 Days</td><td>104.7 kWh</td></tr>
+                        <tr><td>2025-03-03</td><td>311.5 kWh</td><td>14 Days</td><td>77.0 kWh</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+    <h2 id="reference-toggle-header" style="cursor: pointer;">Reference &#9662;</h2>
+    <div id="reference-container" style="display: none;">
+        <p>Thses are updating manually, so they maybe some delay</p>
+        <p>WiFi usage updated 2025/03/05 10:35</p>
+        <p>
+            You have Midnight-Thriller which give you Unlimited Data 12MidNight to Morning 7 AM<br>
+            Base Package include 100GB (7AM-8AM : 60GB and 8AM-MidNight : 40GB) <br>
+            Youth add-on (7x Fun) : Youtube,Instragram,Facebook,TikTok,Viber,Imo,Whatsapp - Validity 7 days<br>
+            Priority of data using system is MidNight Thriller -> Add-ons -> Base Package -> Extra GB
+        </p>
+    </div>
+    
+        <footer>
+        <p>&copy; 05/03/2025</p>
+        </footer>  
+            
+</body>
+</html>
