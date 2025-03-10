@@ -195,7 +195,7 @@ canvas {
 /*Blinkings text*/
 .blink {
     animation: blinker 2s linear infinite;
-    color: red;
+    color: rgb(0, 34, 255);
     font-size: 1.5em;
     /* Larger, responsive font size */
     margin-bottom: 20px;
